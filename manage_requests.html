@@ -6,66 +6,89 @@
     <title>Admin - Panel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="static/css/main.css" />
-    <!--<script src="static/js/main.js"></script>-->
-
+    <script src="static/js/request_sent.js" type="module"></script>
 </head>
 <body>
     <div class="big_wrapper">
         <div class="nav_wrapper">
-            <header><h2><a href="available_ride_offers.html">Ride-my-way</a></h2></header>
+            <header><h2><a href="available_ride_offers.html">Stevens-Share</a></h2></header>
             <nav>
                 <ul>
-                    <li><a href="available_ride_offers.html">Home</a></li>
+                    <li><a href="index-1.html">Home</a></li>
                     <li><a href="profile_page_rides_given_and_taken.html" id="currentLoginUsername"></a></li>
-                    <li id="logoutThisUser"><a href="#">Logout</a></li>
+                    <li id="logoutThisUser"><a href="index.html">Logout</a></li>
                 </ul>
             </nav>
-            <div class="toggle-button">
+            <div class="toggle-button" onclick="toggleSidebar()">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </div>
         <div class="content_area">
-            <div class="page_header">
-                <h2>Manage Your Ride Request</h2>
-                <p>You can cancel a ride request</p>
-            </div>
-            <div class="cancel_request_offers_wrapper  action_area" id="rideRequestDisplayArea">
+            <div class="ride_wrapper">
+                <div class="page_header">
+                    <h2>Your Trips</h2>
+                    <p>You can access your current trips here
+                    </p>
+                </div>
+                <div class="ride_detail_content">
+                    <div id="rideDetailContent">
+                        <!-- contains rides details -->
+                    </div>
+                    <article class="action_area">
 
-                <!-- Area to contain ride offers -->
+                        <table style="margin: 0 auto">
+  <tr>
+    <th>Driver</th>
+    <th>Origin</th>
+    <th>Destination</th>
+    <th>Meetpoint</th>
+    <th>Start date</th>
+    <th>Start time</th>
+    <th>Car Name</th>
+    <th>Registration Number</th>
+    <th>Color</th>
+
+  </tr>
+  <tr>
+    <td>Bhanu</td>
+    <td>Heights</td>
+    <td>Stevens</td>
+    <td>JFK Blvdr</td>
+    <td>08-12-2022</td>
+    <td>18:00</td>
+    <td>Honda Accord</td>
+    <td>ASD-678</td>
+    <td>White</td>
+    <td><ul>
+                            <li class="request"><a href="index-1.html">Cancel</a></li><!--<a href="request_sent_pending_approval.html">-->
+                            
+                        </ul></td>
+  </tr>
+
+</table>
+                        <hr style="margin: 20px 0">
+                        <ul>
+                            <!--<li class="button danger" id="cancelDisplayButton"><a href="request_ride.html">Cancel request</a></li>-->
+                            <li class="button default"><a href="index-1.html">Back</a></li>
+                        </ul>
+                        <hr style="margin: 20px 0">
+                        <h2> </h2>
+                        
+                        <span><a href="#">View more</a></span>
+                    </article>
+                </div>
             </div>
         </div>
+        <br><br><br>
         <footer class="footer_wrapper">
-            <div class="top_footer_section">
-                <div class="footer_column">
-                    <h1>About Us</h1>
-                    <p>We are a technology company that designs social products. </p><br>
-                    <p>In case of any concern please reach to us on facebook, twitter. We will be there to help</p>
-                </div>
-                <div class="footer_column">
-                    <h1>What we do</h1>
-                    <span>Android development</span><br>
-                    <span>Graphic designs</span><br>
-                    <span>Windows development</span><br>
-                    <span>Linux development</span>
-                </div>
-                <div class="footer_column">
-                    <h1>Contacts</h1>
-                    <span>Email &nbsp; dr.kimanje2patrick2@gmail.com</span><br>
-                    <span>Facebook &nbsp; kimpatrick</span><br>
-                    <span>Twitter &nbsp; dr.kimpatrick</span><br>
-                    <span>+(256) 750461002</span>
-                </div>
-
-
-            </div>
+            
             <div class="bottom_footer_section">
-                <p>&copy; dr.kimpatrick | Andela All rights reserved </p>
+                <p>Team-9 Presentaion | Stevens Institute of Technology use only</p>
             </div>
         </footer>
     </div>
-    <script src="static/js/manage_requests.js" type="module"></script>
 
 </body>
 </html>
